@@ -38,7 +38,7 @@ export function EmailCapture() {
   };
 
   return (
-    <section className="py-20 sm:py-28">
+    <section id="email-capture" className="py-20 sm:py-28">
       <motion.div
         className="mx-auto max-w-xl rounded-2xl border border-border bg-card/60 p-8 text-center sm:p-12"
         variants={fadeInUp}

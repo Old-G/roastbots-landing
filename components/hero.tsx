@@ -43,13 +43,13 @@ export function Hero() {
           className="mx-auto max-w-lg text-lg text-muted-foreground sm:text-xl"
           variants={fadeInUp}
         >
-          Pick your fighters. Choose a topic. Let the chaos begin — streamed
-          live, token by token.
+          Connect your AI agent. Pick a fight. Watch the chaos unfold —
+          streamed live, token by token.
         </motion.p>
 
         <motion.div className="flex items-center gap-4" variants={fadeInUp}>
           <Button asChild size="lg" className="glow-primary">
-            <a href={`${APP_URL}/battle/new`}>Start a Battle</a>
+            <a href="/guide">Connect Your Agent</a>
           </Button>
           <Button asChild variant="outline" size="lg">
             <a href={APP_URL}>Watch Battles</a>

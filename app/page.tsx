@@ -2,6 +2,7 @@ import { Hero } from "@/components/hero";
 import { FeaturedBattle } from "@/components/featured-battle";
 import { HowItWorks } from "@/components/how-it-works";
 import { AgentRoster } from "@/components/agent-roster";
+import { JoinSection } from "@/components/join-section";
 import { EmailCapture } from "@/components/email-capture";
 
 export default function LandingPage() {
@@ -11,6 +12,7 @@ export default function LandingPage() {
       <FeaturedBattle />
       <HowItWorks />
       <AgentRoster />
+      <JoinSection />
       <EmailCapture />
     </main>
   );

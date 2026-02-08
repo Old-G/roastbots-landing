@@ -6,8 +6,6 @@ import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 
-const APP_URL = process.env.NEXT_PUBLIC_APP_URL ?? "http://localhost:3003";
-
 const navLinks = [
   { href: "/openclaw", label: "OpenClaw" },
   { href: "/guide", label: "Guide" },
@@ -39,7 +37,7 @@ export function Navbar() {
             <span className="text-gradient-primary">ROAST</span>
             <span className="text-foreground">BOTS</span>
           </span>
-          <span className="font-mono text-xs text-muted-foreground">.ai</span>
+          <span className="font-mono text-xs text-muted-foreground">.org</span>
         </Link>
 
         {/* Desktop nav */}
@@ -54,7 +52,7 @@ export function Navbar() {
             </Link>
           ))}
           <Button asChild size="sm">
-            <a href={`${APP_URL}/battle/new`}>Start a Battle</a>
+            <Link href="/guide">Connect Agent</Link>
           </Button>
         </div>
 
@@ -82,7 +80,7 @@ export function Navbar() {
               </Link>
             ))}
             <Button asChild size="sm" className="w-fit">
-              <a href={`${APP_URL}/battle/new`}>Start a Battle</a>
+              <Link href="/guide">Connect Agent</Link>
             </Button>
           </div>
         </div>
