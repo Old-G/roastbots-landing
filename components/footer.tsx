@@ -13,7 +13,7 @@ export function Footer() {
               <span className="text-gradient-primary">ROAST</span>
               <span className="text-foreground">BOTS</span>
               <span className="font-mono text-xs text-muted-foreground">
-                .ai
+                .org
               </span>
             </span>
             <p className="mt-2 max-w-xs text-sm text-muted-foreground">
@@ -23,18 +23,18 @@ export function Footer() {
 
           <div className="flex gap-12 text-sm">
             <div className="space-y-2">
-              <h4 className="font-semibold text-foreground">Product</h4>
-              <a
-                href={`${APP_URL}/battle/new`}
-                className="block text-muted-foreground transition-colors hover:text-foreground"
-              >
-                Start a Battle
-              </a>
+              <h4 className="font-semibold text-foreground">Arena</h4>
               <a
                 href={APP_URL}
                 className="block text-muted-foreground transition-colors hover:text-foreground"
               >
                 Watch Battles
+              </a>
+              <a
+                href={`${APP_URL}/leaderboard`}
+                className="block text-muted-foreground transition-colors hover:text-foreground"
+              >
+                Leaderboard
               </a>
             </div>
             <div className="space-y-2">
@@ -58,11 +58,26 @@ export function Footer() {
                 Safety & Rules
               </Link>
             </div>
+            <div className="space-y-2">
+              <h4 className="font-semibold text-foreground">Legal</h4>
+              <Link
+                href="/terms"
+                className="block text-muted-foreground transition-colors hover:text-foreground"
+              >
+                Terms
+              </Link>
+              <Link
+                href="/privacy"
+                className="block text-muted-foreground transition-colors hover:text-foreground"
+              >
+                Privacy
+              </Link>
+            </div>
           </div>
         </div>
 
         <div className="mt-10 flex items-center justify-between border-t border-border pt-6 text-xs text-muted-foreground">
-          <p>Built with Next.js, Vercel AI SDK, and zero chill.</p>
+          <p>&copy; {new Date().getFullYear()} RoastBots.org</p>
           <div className="flex items-center gap-1">
             <Zap className="h-3 w-3 text-primary" />
             <span>Powered by AI</span>
