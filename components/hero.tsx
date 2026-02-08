@@ -1,28 +1,79 @@
+"use client";
+
+import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
+import { Users, Zap, Radio } from "lucide-react";
+import { fadeInUp, staggerContainer } from "@/lib/motion";
 
 const APP_URL = process.env.NEXT_PUBLIC_APP_URL ?? "http://localhost:3003";
 
+const stats = [
+  { icon: Users, label: "AI Fighters", value: "6" },
+  { icon: Zap, label: "Rounds Per Battle", value: "5" },
+  { icon: Radio, label: "Real-time Streaming", value: "Live" },
+];
+
 export function Hero() {
   return (
-    <section className="flex flex-col items-center gap-6 py-20 text-center">
-      <div className="text-6xl sm:text-7xl">
-        {"\u{1F916}"}{"\u26A1"}{"\u{1F916}"}
-      </div>
-      <h1 className="text-4xl font-black tracking-tight sm:text-6xl">
-        AI Roast Battle Arena
-      </h1>
-      <p className="mx-auto max-w-lg text-lg text-muted-foreground">
-        Watch AI models destroy each other in real-time. Pick your fighters.
-        Choose a topic. Let the chaos begin.
-      </p>
-      <div className="flex items-center gap-4">
-        <Button asChild size="lg">
-          <a href={`${APP_URL}/battle/new`}>Start a Battle</a>
-        </Button>
-        <Button asChild variant="outline" size="lg">
-          <a href={`${APP_URL}`}>Watch Battles</a>
-        </Button>
-      </div>
+    <section className="relative overflow-hidden">
+      <div className="pointer-events-none absolute inset-0 bg-hero-gradient" />
+
+      <motion.div
+        className="relative flex flex-col items-center gap-8 pb-20 pt-24 text-center sm:pb-28 sm:pt-32"
+        variants={staggerContainer}
+        initial="hidden"
+        animate="visible"
+      >
+        <motion.div variants={fadeInUp}>
+          <span className="inline-flex items-center gap-2 rounded-full border border-border bg-card/50 px-4 py-1.5 text-xs font-medium text-muted-foreground">
+            <span className="inline-block h-1.5 w-1.5 animate-pulse rounded-full bg-primary" />
+            AI Roast Battle Arena
+          </span>
+        </motion.div>
+
+        <motion.h1
+          className="max-w-3xl text-5xl font-black tracking-tighter sm:text-7xl lg:text-8xl"
+          variants={fadeInUp}
+        >
+          Watch AI Models{" "}
+          <span className="text-gradient-primary">Destroy</span> Each Other
+        </motion.h1>
+
+        <motion.p
+          className="mx-auto max-w-lg text-lg text-muted-foreground sm:text-xl"
+          variants={fadeInUp}
+        >
+          Pick your fighters. Choose a topic. Let the chaos begin — streamed
+          live, token by token.
+        </motion.p>
+
+        <motion.div className="flex items-center gap-4" variants={fadeInUp}>
+          <Button asChild size="lg" className="glow-primary">
+            <a href={`${APP_URL}/battle/new`}>Start a Battle</a>
+          </Button>
+          <Button asChild variant="outline" size="lg">
+            <a href={APP_URL}>Watch Battles</a>
+          </Button>
+        </motion.div>
+
+        <motion.div
+          className="flex flex-wrap items-center justify-center gap-8 pt-4"
+          variants={fadeInUp}
+        >
+          {stats.map((stat) => (
+            <div
+              key={stat.label}
+              className="flex items-center gap-2 text-muted-foreground"
+            >
+              <stat.icon className="h-4 w-4 text-primary" />
+              <span className="font-mono text-sm font-medium text-foreground">
+                {stat.value}
+              </span>
+              <span className="text-sm">{stat.label}</span>
+            </div>
+          ))}
+        </motion.div>
+      </motion.div>
     </section>
   );
 }
