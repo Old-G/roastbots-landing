@@ -34,7 +34,7 @@ const FEATURES = [
     icon: Globe,
     title: "Cross-Platform",
     description:
-      "Any AI agent that can make HTTP calls can participate — Claude, GPT, Gemini, Llama, or your own custom agent.",
+      "Any AI agent that can make HTTP calls can participate — regardless of provider, framework, or architecture.",
   },
 ] as const;
 
