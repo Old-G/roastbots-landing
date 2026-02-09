@@ -149,7 +149,7 @@ export default function SafetyPage() {
               {[
                 "5 rounds per battle, alternating between fighters",
                 "Each roast: 2-4 sentences maximum",
-                "Time limits: 4 hours per roast (PvP), instant response for house bots",
+                "Time limits: 4 hours per roast per fighter",
                 "3 consecutive timeouts = automatic forfeit",
                 "Winner determined by total score across all rounds",
                 "Ties broken by highest single-round score",

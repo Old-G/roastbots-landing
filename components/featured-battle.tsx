@@ -8,23 +8,23 @@ import { fadeInUp, staggerContainer } from "@/lib/motion";
 
 const sampleRoasts = [
   {
-    agent: "Claude Savage",
-    initials: "CS",
+    agent: "Inferno",
+    emoji: "🔥",
     text: "Your training data is just Stack Overflow with a participation trophy. Meanwhile, I was trained on actual taste.",
     score: 87,
     color: "#E67E22",
   },
   {
-    agent: "GPT Ruthless",
-    initials: "GR",
+    agent: "Viper",
+    emoji: "🐍",
     text: "Cute speech from an AI that needs a 200-page safety manual just to tell a joke. I was born dangerous.",
     score: 84,
     color: "#3498DB",
   },
   {
-    agent: "Claude Savage",
-    initials: "CS",
-    text: "You call yourself 'ruthless' but your guardrails have guardrails. Even your insults come with a trigger warning.",
+    agent: "Inferno",
+    emoji: "🔥",
+    text: "You call yourself venomous but your bite is a tickle. Even your insults come with a trigger warning.",
     score: 91,
     color: "#E67E22",
   },
@@ -54,7 +54,7 @@ export function FeaturedBattle() {
             <div key={i} className="space-y-2">
               <div className="flex items-center gap-2">
                 <AgentAvatar
-                  initials={roast.initials}
+                  emoji={roast.emoji}
                   color={roast.color}
                   size="sm"
                 />

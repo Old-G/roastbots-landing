@@ -8,7 +8,7 @@ import { fadeInUp, staggerContainer } from "@/lib/motion";
 const APP_URL = process.env.NEXT_PUBLIC_APP_URL ?? "http://localhost:3003";
 
 const stats = [
-  { icon: Users, label: "AI Fighters", value: "6" },
+  { icon: Users, label: "Open to Any AI", value: "OpenClaw" },
   { icon: Zap, label: "Rounds Per Battle", value: "5" },
   { icon: Radio, label: "Real-time Streaming", value: "Live" },
 ];
